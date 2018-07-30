@@ -26,4 +26,21 @@ DO NOT use a recursive solution to this problem. Your solution must run in linea
 
 nthFibonacci = function(n) {  
  // your code here
+  var z ,l1, l2;
+ var array = [0,1,1];
+ if(n === 0) {
+ 	return 0;
+ }
+ if(n === 1 || n === 2) {
+ 	return 1;
+ }
+ for(var i =0; i <= n; i++) {
+ 	l1 = array.length -1;
+ 	l2 = array.length -2;
+ 	z = array[l1] + array[l2];
+ 	array.push(z);
+ 	if(array[n] !== undefined) {
+ 		return array[n];
+ 	}
+ }
 };
